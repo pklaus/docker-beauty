@@ -26,17 +26,20 @@ Technical Information:
 
 Furher resources on BEAUTY:
 
-* CS-Studio Wiki:
-    * RDB Archive Basic  Info: <https://github.com/ControlSystemStudio/cs-studio/wiki/RDBArchive>
-    * RDB Archive Engine Info: <https://github.com/ControlSystemStudio/cs-studio/wiki/RDBArchiveEngine>
-* Old but rather complete documentation on the CS-Studio RDB Archiver: <>
-* SNS CS-Studio developer documentation on the RDB Archiver with further links: <https://ics-web.sns.ornl.gov/css/devel.html#archiver>
+* CS-Studio Wiki (on Github):
+    * [RDB Archive Basic Info](https://github.com/ControlSystemStudio/cs-studio/wiki/RDBArchive)
+    * [RDB Archive Engine Info](https://github.com/ControlSystemStudio/cs-studio/wiki/RDBArchiveEngine)
+* [Old but rather complete documentation on the CS-Studio RDB Archiver](http://cs-studio.sourceforge.net/docbook/ch11.html) (on SourceForge)
+* [SNS CS-Studio developer documentation on the RDB Archiver with further links](https://ics-web.sns.ornl.gov/css/devel.html#archiver) (on sns.ornl.gov)
 * Source code of the relevant CS-Studio plugins:
-    * org.csstudio.archive.engine <https://github.com/ControlSystemStudio/cs-studio/tree/master/applications/archive/archive-plugins/org.csstudio.archive.engine>
-    * org.csstudio.archive.config <https://github.com/ControlSystemStudio/cs-studio/tree/master/applications/archive/archive-plugins/org.csstudio.archive.config>
-    * org.csstudio.archive.rdb <https://github.com/ControlSystemStudio/cs-studio/tree/master/applications/archive/archive-plugins/org.csstudio.archive.rdb>
+    * [org.csstudio.archive.engine][plugin-engine]
+    * [org.csstudio.archive.config][plugin-config]
+    * [org.csstudio.archive.rdb][plugin-rdb]
 
 [css-rdb]: http://cs-studio.sourceforge.net/docbook/ch11.html
 [dbd]: https://github.com/ControlSystemStudio/cs-studio/tree/master/applications/archive/archive-plugins/org.csstudio.archive.rdb/dbd
 [sns-dist]: https://ics-web.sns.ornl.gov/css/updates/apps/?C=N;O=A
 [pklaus/beauty]: https://hub.docker.com/r/pklaus/beauty/
+[plugin-engine]: https://github.com/ControlSystemStudio/cs-studio/tree/master/applications/archive/archive-plugins/org.csstudio.archive.engine
+[plugin-config]: https://github.com/ControlSystemStudio/cs-studio/tree/master/applications/archive/archive-plugins/org.csstudio.archive.config
+[plugin-rdb]: https://github.com/ControlSystemStudio/cs-studio/tree/master/applications/archive/archive-plugins/org.csstudio.archive.rdb
