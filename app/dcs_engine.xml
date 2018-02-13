@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE engineconfig SYSTEM "./engineconfig.dtd">
+<engineconfig>
+<!--default values
+  <buffer_reserve>2</buffer_reserve>
+  <ignored_future>1</ignored_future>
+  <write_period>30</write_period>
+-->
+  <buffer_reserve>4</buffer_reserve>
+  <ignored_future>1</ignored_future>
+  <write_period>60</write_period>
+  <file_size>61</file_size>
+  <get_threshold>20</get_threshold>
+  <max_repeat_count>120</max_repeat_count>
+  <group>
+    <name>Pressure</name>
+      <channel><name>CBM:MVD:VACUUM:RECIPIENT:1:Status</name>  		<period>0.4</period><monitor/></channel>
+      <channel><name>CBM:MVD:VACUUM:RECIPIENT:2:Status</name>  		<period>0.4</period><monitor/></channel>
+      <channel><name>CBM:MVD:VACUUM:RECIPIENT:3:Status</name>  		<period>0.4</period><monitor/></channel>
+      <channel><name>CBM:MVD:VACUUM:RECIPIENT:1:Pressure</name>		<period>0.4</period><monitor/></channel>
+      <channel><name>CBM:MVD:VACUUM:RECIPIENT:2:Pressure</name>		<period>0.4</period><monitor/></channel>
+      <channel><name>CBM:MVD:VACUUM:RECIPIENT:3:Pressure</name>		<period>0.4</period><monitor/></channel>
+ 
+      <channel><name>CBM:MVD:VACUUM:PRESTO_RECIPIENT:SIDE_A:TPR2:Voltage</name><period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:VACUUM:PRESTO_RECIPIENT:SIDE_A:IKR:Voltage</name> <period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:VACUUM:PRESTO_RECIPIENT:SIDE_B:TPR2:Voltage</name><period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:VACUUM:PRESTO_RECIPIENT:SIDE_B:IKR:Voltage</name> <period>0.2</period><monitor/></channel>
+  </group>
+  <group>
+    <name>Cooling</name>
+      <channel><name>CBM:MVD:COOLING:CC405:FLOW:IN:Flow</name>           <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:FLOW:IN:Total</name>          <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:FLOW:OUT:Flow</name>          <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:FLOW:OUT:Total</name>         <period>00:00:02</period><monitor/></channel>
+
+      <channel><name>CBM:MVD:COOLING:CC405:BathTemperatureMom</name>    <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:ExternalTemperatureMom</name><period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:SetpointMom</name>           <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:State</name>           	<period>00:00:02</period><monitor/></channel>
+      <!-- 
+      <channel><name>CBM:MVD:COOLING:CC405:T0:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TC:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:T1:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TIntern:RAW</name>           <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TProcess:RAW</name>          <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:V:RAW</name>          	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:HT:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:Heating:RAW</name>           <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:F:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:I:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:unknown1:RAW</name>          <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:unknown2:RAW</name>          <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:AIF_IN:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TU:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TX1:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TX0:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:Pressure:RAW</name>          <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:PumpSpeed:RAW</name>         <period>00:00:02</period><monitor/></channel>
+      -->
+      <channel><name>CBM:MVD:COOLING:CC405:Verify</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:Firmware</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:V</name>           		<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:HT</name>           		<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:Heating</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:unknown1</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:unknown2</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:F</name>           		<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:T0</name>           		<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TC</name>           		<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:T1</name>           		<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TIntern</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TProcess</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TU</name>           		<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TX1</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TX0</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:Pressure</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:PumpSpeed</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:I</name>           		<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:AIF_IN</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:TemperatureControl</name>    <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:Setpoint</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:MinimumValue</name>          <period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:COOLING:CC405:MaximumValue</name>          <period>00:00:02</period><monitor/></channel>
+ </group>
+ <group>
+    <name>Temperature</name>
+      <!-- 
+      <channel><name>CBM:MVD:PT100:VAC:00:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:01:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:02:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:03:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:04:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:05:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:06:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:07:RAW</name>           	<period>00:00:02</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:CONV_RATE</name>        	<period>00:00:02</period><monitor/></channel>
+      -->
+      <channel><name>CBM:MVD:PT100:VAC:00</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:01</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:02</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:03</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:04</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:05</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:06</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:07</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:10</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:11</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:12</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:13</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:14</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:15</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:16</name>           	<period>0.2</period><monitor/></channel>
+      <channel><name>CBM:MVD:PT100:VAC:17</name>           	<period>0.2</period><monitor/></channel>
+ </group>
+
+<group>
+    <name>Low Voltage</name>
+      <channel><name>CBM:MVD:POWER:AGILENT_34411A:Voltage</name>                   <period>1</period><monitor/></channel>
+
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:GetGeneralOutput</name>        <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN1:GetOutput</name>         <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN2:GetOutput</name>         <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN3:GetOutput</name>         <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN1:GetFuse</name>           <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN2:GetFuse</name>           <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN3:GetFuse</name>           <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN1:GetVoltage</name>        <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN2:GetVoltage</name>        <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN3:GetVoltage</name>        <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN1:GetCurrent</name>        <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN2:GetCurrent</name>        <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN3:GetCurrent</name>        <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN1:MeasuredVoltage</name>   <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN2:MeasuredVoltage</name>   <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN3:MeasuredVoltage</name>   <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN1:MeasuredCurrent</name>   <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN2:MeasuredCurrent</name>   <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN3:MeasuredCurrent</name>   <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN1:GetOVPVoltage</name>     <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN2:GetOVPVoltage</name>     <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN3:GetOVPVoltage</name>     <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN1:GetOVPVoltageMin</name>  <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN2:GetOVPVoltageMin</name>  <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN3:GetOVPVoltageMin</name>  <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN1:GetOVPVoltageMax</name>  <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN2:GetOVPVoltageMax</name>  <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN3:GetOVPVoltageMax</name>  <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN1:GetOVPMode</name>        <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN2:GetOVPMode</name>        <period>1</period><monitor/></channel>
+      <channel><name>CBM:MVD:POWER:PRESTO_RECIPIENT:CHAN3:GetOVPMode</name>        <period>1</period><monitor/></channel>
+</group>
+<group>
+    <name>Environment</name>
+      <channel><name>CBM:MVD:ENVIRON:OPUS20_CLEANROOM:Temperature</name>           <period>5</period><monitor/></channel>
+      <channel><name>CBM:MVD:ENVIRON:OPUS20_CLEANROOM:RelativeHumidity</name>      <period>5</period><monitor/></channel>
+      <channel><name>CBM:MVD:ENVIRON:OPUS20_CLEANROOM:AbsoluteHumidity</name>      <period>5</period><monitor/></channel>
+      <channel><name>CBM:MVD:ENVIRON:OPUS20_CLEANROOM:Dewpoint</name>              <period>5</period><monitor/></channel>
+      <channel><name>CBM:MVD:ENVIRON:OPUS20_CLEANROOM:BatteryVoltage</name>        <period>5</period><monitor/></channel>
+</group>
+
+</engineconfig>
+

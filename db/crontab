@@ -1,0 +1,2 @@
+# create a cronjob to run the DB partitioning regularly:
+0 * * * * /usr/bin/psql -h cbmmvd_pgsql_server -p 5432 -U archive -d archive -a -c "SELECT archive.sample_update_partitions('2018-01-01'::timestamp, 'archive', 'archive', 'week');"
