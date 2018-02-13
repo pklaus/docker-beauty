@@ -15,7 +15,7 @@ They need to be connected to the same docker network.
 
 Ready-to-use images can be found on the Docker Hub: [pklaus/beauty][].
 
-### Furhter Technical Info About BEAUTY
+### Further Technical Info About BEAUTY
 
 Technical Information:
 
