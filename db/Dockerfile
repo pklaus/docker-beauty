@@ -2,6 +2,9 @@ FROM postgres:9.6-alpine
 
 #ENV POSTGRES_DB=archive
 
+# Copy the SQL files to initialize the db
+# The files in /docker-entrypoint-initdb.d are considered in:
+# https://github.com/docker-library/postgres/blob/master/10/alpine/docker-entrypoint.sh
 COPY 01_postgres_schema.sql            /docker-entrypoint-initdb.d/
 COPY 02_postgres_partitioning.sql      /docker-entrypoint-initdb.d/
 COPY 03_postgres_init_partitioning.sql /docker-entrypoint-initdb.d/
