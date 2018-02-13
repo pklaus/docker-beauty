@@ -2,4 +2,4 @@
 
 set -ex
 
-docker build --squash -t epics_css_archiver_app .
+docker build --squash -t beauty-app .

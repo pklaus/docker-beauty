@@ -8,8 +8,8 @@ It's sometimes called “Best Ever Archive Toolset, yet” (BEAUTY).
 
 The distribution is split into two containers:
 
-* one container running a PostgreSQL database (`epics-css-archiver-db`), and
-* another one running the archiver application (`epics-css-archiver-app`).
+* one container running a PostgreSQL database  (`beauty-db`), and
+* another one running the archiver application (`beauty-app`).
 
 They need to be connected to the same docker network.
 
