@@ -13,6 +13,8 @@ The distribution is split into two containers:
 
 They need to be connected to the same docker network.
 
+Ready-to-use images can be found on the Docker Hub: [pklaus/beauty][].
+
 ### Furhter Technical Info About BEAUTY
 
 Technical Information:
@@ -37,3 +39,4 @@ Furher resources on BEAUTY:
 [css-rdb]: http://cs-studio.sourceforge.net/docbook/ch11.html
 [dbd]: https://github.com/ControlSystemStudio/cs-studio/tree/master/applications/archive/archive-plugins/org.csstudio.archive.rdb/dbd
 [sns-dist]: https://ics-web.sns.ornl.gov/css/updates/apps/?C=N;O=A
+[pklaus/beauty]: https://hub.docker.com/r/pklaus/beauty/

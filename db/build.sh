@@ -2,4 +2,4 @@
 
 set -ex
 
-docker build --squash -t beauty-db .
+docker build --squash -t pklaus/beauty:db-latest .
