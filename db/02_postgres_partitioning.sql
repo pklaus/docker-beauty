@@ -163,4 +163,4 @@ ALTER TABLE sample OWNER TO archive;
 
 ALTER FUNCTION archive.sample_update_partitions(timestamp without time zone, text, text, text) OWNER TO archive;
 
-commit;
+COMMIT;

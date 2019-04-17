@@ -238,10 +238,8 @@ SELECT channel.name AS channel,
    
    
    
-CREATE USER archive WITH PASSWORD '$archive';
-ALTER USER archive WITH PASSWORD '$archive';
-
-CREATE USER report WITH PASSWORD '$report';
+CREATE USER archive WITH ENCRYPTED PASSWORD '$archive';
+CREATE USER report WITH ENCRYPTED PASSWORD '$report';
 
 SELECT * FROM pg_user;
 
@@ -277,11 +275,11 @@ ALTER TABLE smpl_mode OWNER TO archive;
 ALTER TABLE status OWNER TO archive;
 
  
-alter user postgres set search_path to 'archive';
-alter user archive set search_path to 'archive';
-alter user report set search_path to 'archive'; 
+ALTER USER postgres SET search_path TO 'archive';
+ALTER USER archive  SET search_path TO 'archive';
+ALTER USER report   SET search_path TO 'archive'; 
 
-GRANT ALL ON SCHEMA archive TO archive;
+GRANT ALL   ON SCHEMA archive TO archive;
 GRANT USAGE ON SCHEMA archive TO report;
   
- commit;
+COMMIT;
