@@ -1,4 +1,6 @@
 -- Provided by Martin Konrad, TU Darmstadt
+-- https://github.com/ControlSystemStudio/cs-studio/commit/6c44d49
+-- https://github.com/ControlSystemStudio/cs-studio/blob/master/applications/archive/archive-plugins/org.csstudio.archive.rdb/dbd/postgres_partitioning.txt
 
 -- The sample table can grow very fast if you archive a lot of data and with the
 -- table size the index size also grows. This results in poor performance if the
