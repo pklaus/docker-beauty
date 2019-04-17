@@ -1,4 +1,4 @@
-FROM postgres:9.6-alpine
+FROM postgres:11-alpine
 
 #ENV POSTGRES_DB=archive
 
@@ -7,7 +7,6 @@ FROM postgres:9.6-alpine
 # https://github.com/docker-library/postgres/blob/master/10/alpine/docker-entrypoint.sh
 COPY 01_postgres_schema.sql            /docker-entrypoint-initdb.d/
 COPY 02_postgres_partitioning.sql      /docker-entrypoint-initdb.d/
-COPY 03_postgres_init_partitioning.sql /docker-entrypoint-initdb.d/
 COPY 04_postgres_pg-hba-conf.sh        /docker-entrypoint-initdb.d/
 
 COPY crontab /tmp/
