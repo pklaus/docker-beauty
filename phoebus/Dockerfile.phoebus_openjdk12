@@ -1,0 +1,10 @@
+FROM openjdk:12-jdk
+
+RUN yum -y install xorg-x11-xauth xorg-x11-xinit libXtst xorg-x11-utils xclock mesa-libGL mesa-dri-drivers gtk3
+
+COPY phoebus /phoebus
+COPY settings.ini /phoebus/
+COPY phoebus.sh /phoebus/
+WORKDIR /phoebus
+
+CMD ./phoebus.sh -settings settings.ini

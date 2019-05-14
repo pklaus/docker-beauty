@@ -1,0 +1,20 @@
+FROM ubuntu_oraclejava12
+
+RUN apt update \
+ && apt install -y \
+    xauth xinit libdri2-dev libgl1-mesa-dev \
+    gir1.2-gtk-3.0 \
+    #libgtk-3-dev \
+    #libglib2.0-dev libgdk-pixbuf2.0-dev libpango1.0-dev \
+    #libatk1.0-dev libatk-bridge2.0-dev libcairo2-dev \
+    #libfontconfig1-dev pkg-config \
+    #dpkg-dev libdpkg-perl \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+COPY phoebus /phoebus
+COPY settings.ini /phoebus/
+COPY phoebus.sh /phoebus/
+WORKDIR /phoebus
+
+CMD ./phoebus.sh -settings settings.ini

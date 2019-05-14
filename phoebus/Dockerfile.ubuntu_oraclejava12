@@ -1,0 +1,16 @@
+# Dockerfile
+FROM ubuntu:18.04
+
+#MAINTAINER  Author Name <author@email.com>
+
+RUN echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" > /etc/apt/sources.list
+
+RUN apt update \
+ && apt-get install -y software-properties-common \
+ && add-apt-repository ppa:linuxuprising/java \
+ && apt update \
+ && echo oracle-java12-installer shared/accepted-oracle-license-v1-2 select true | /usr/bin/debconf-set-selections \
+ && apt install -y oracle-java12-installer oracle-java12-set-default \
+ && rm -rf /var/cache/oracle-jdk${JAVA_VER}-installer \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
