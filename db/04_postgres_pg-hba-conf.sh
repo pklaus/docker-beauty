@@ -13,6 +13,9 @@ host             all             all          ::1/128         trust
 hostnossl        all             archive      samenet         trust
 hostnossl        all             report       samenet         trust
  
-#host             all             all          0.0.0.0/0       md5
 host             all             all          all             md5
+host             all             all          0.0.0.0/0       md5
+
+#If you're running PostgreSQL >= 10 and also all clieants are cutting-edge:
+#host             all             all          all             scram-sha-256
 EOF
